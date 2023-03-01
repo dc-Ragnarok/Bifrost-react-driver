@@ -22,7 +22,7 @@
     "scripts": {
         "cs": "./vendor/bin/phpcs --standard=PSR12 src tests",
         "csf": "./vendor/bin/phpcbf --standard=PSR12 src tests",
-        "test": "./vendor/bin/phpunit",
-        "test-coverage": "php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html .phpunit.cache/cov-html"
+        "test": "php tests/_HttpEchoServer.php& HTTP_SERVER_PID=$!; ./vendor/bin/phpunit; kill $HTTP_SERVER_PID;",
+        "test-coverage": "php tests/_HttpEchoServer.php& HTTP_SERVER_PID=$!; php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html .phpunit.cache/cov-html; kill $HTTP_SERVER_PID;"
     }
 }
