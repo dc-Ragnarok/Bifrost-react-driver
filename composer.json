@@ -12,7 +12,7 @@
     "require": {
         "react/http": "^1.8",
         "react/async": "^4.0",
-        "dc-ragnarok/bifrost": "*"
+        "ragnarok/bifrost": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.0",
